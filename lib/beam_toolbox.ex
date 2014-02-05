@@ -6,4 +6,19 @@ defmodule BeamToolbox do
   def start(_type, _args) do
     BeamToolbox.Supervisor.start_link
   end
+
+  ## FIXTURES / DUMMY DATA
+  def project_data do
+    [
+      {"Testing",
+        [
+          {"Integration Testing",
+            [
+              {"Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"}
+            ]
+          }
+        ]
+      }
+    ]
+  end
 end
