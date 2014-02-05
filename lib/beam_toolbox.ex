@@ -16,6 +16,15 @@ defmodule BeamToolbox do
             [
               {"Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"}
             ]
+          },
+          {"General Testing",
+            [
+              {"Common Test", "http://www.erlang.org/doc/apps/common_test/basics_chapter.html", ""},
+              {"EUnit", "http://www.erlang.org/doc/apps/eunit/chapter.html", ""},
+              {"Triq", "https://github.com/krestenkrab/triq", "https://github.com/krestenkrab/triq"},
+              {"test_server", "http://www.erlang.org/doc/man/test_server.html", ""},
+              {"tsung", "http://tsung.erlang-projects.org/", "https://github.com/processone/tsung"}
+            ]
           }
         ]
       },
