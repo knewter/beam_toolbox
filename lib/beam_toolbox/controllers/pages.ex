@@ -19,10 +19,25 @@ defmodule BeamToolbox.Controllers.Pages do
   defp render_category_groups do
     BeamToolbox.project_data
       |> Enum.map(&category_group_html/1)
-      |> Enum.join("")
+      |> Enum.join
   end
 
-  defp category_group_html({category_group_name, _categories}) do
-    render_partial("category_group", [category_group_name: category_group_name])
+  defp category_group_html({name, categories}) do
+    render_partial("category_group", [
+      name: name,
+      categories: render_categories(categories)
+    ])
+  end
+
+  defp render_categories(categories) do
+    categories
+      |> Enum.map(&category_html/1)
+      |> Enum.join
+  end
+
+  defp category_html({name, _projects}) do
+    render_partial("category", [
+      name: name
+    ])
   end
 end

@@ -18,6 +18,9 @@ defmodule BeamToolbox do
             ]
           }
         ]
+      },
+      {"HTML and Markup",
+        []
       }
     ]
   end
