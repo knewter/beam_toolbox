@@ -26,11 +26,30 @@ etc).  Here is a first-pass at elucidating the desired features in the first
     - By name, alphabetically
   - Projects
     - By name, alphabetically
+- Project details
+  - GitHub project page
+  - README.md, rendered, as landing page
+  - Show number of downloads from expm
+  - Show number of forks/watchers on GitHub
+  - Fetch metadata from expm
+  - Fetch metadata from GitHub
+    - First Commit
+    - Last commit
+    - Development Activity indicator (active/inactive)
+    - # Watchers
+    - # Forks
+    - # contributors
+    - # issues
+    - # wiki pages
+    - Top contributors
 
-Initially, this data will be seeded with static files maintained in the git
+Initially, the core data will be seeded with static files maintained in the git
 repository.  Updates would happen via Pull Requests.  After the data model
 solidifies a bit, I would anticipate building out a database with some end-user
 modifiable fields.
+
+The rest of the data would be pulled and cached from remote services (GitHub,
+expm, etc).
 
 ## Build out
 
