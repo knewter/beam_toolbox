@@ -38,6 +38,29 @@ I intend to build this out in a series of ElixirSips episodes, entirely in the
 open.  I welcome suggestions on the data model ahead of time, but I do intend to
 start this week (it is 2014-02-04 as of this writing).
 
+## Development
+
+We use compass/sass for css.  This requires ruby.  To install compass, do the
+following:
+
+```sh
+. .rvmrc
+bundle
+```
+
+To have compass watch your sass files for changes and recompile, run:
+
+```sh
+compass watch
+```
+
+There aren't yet any tests for the elixir code, as it's all prototyping work at
+present, but when there are you can run the tests with:
+
+```elixir
+mix test
+```
+
 ## Footnotes, etc.
 
 The BEAM Toolbox is brought to you by Josh Adams of
