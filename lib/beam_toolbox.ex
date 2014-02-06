@@ -14,7 +14,8 @@ defmodule BeamToolbox do
         [
           {"Integration Testing",
             [
-              {"hut", "http://amrita.io", "http://github.com/josephwilk/amrita"}
+              {"Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"},
+              {"Hound", "https://github.com/HashNuke/hound", "https://github.com/HashNuke/hound"}
             ]
           },
           {"General Testing",
