@@ -54,12 +54,23 @@ To have compass watch your sass files for changes and recompile, run:
 compass watch
 ```
 
+Fetch the elixir app's dependencies with:
+
+```sh
+mix deps.get
+```
+
 There aren't yet any tests for the elixir code, as it's all prototyping work at
 present, but when there are you can run the tests with:
 
-```elixir
+```sh
 mix test
 ```
+
+To run the site, start an iex session with `iex -S mix`, and then run
+`BeamToolbox.Router.start`.
+
+Then you can visit http://localhost:4000/pages/foo.
 
 ## Footnotes, etc.
 

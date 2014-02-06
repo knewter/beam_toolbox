@@ -4,13 +4,15 @@ defmodule BeamToolbox.Mixfile do
   def project do
     [ app: :beam_toolbox,
       version: "0.0.1",
-      elixir: "~> 0.12.3-dev",
       deps: deps ]
   end
 
   # Configuration for the OTP application
   def application do
-    [mod: { BeamToolbox, [] }]
+    [
+      applications: [],
+      mod: { BeamToolbox, [] }
+    ]
   end
 
   # Returns the list of dependencies in the format:

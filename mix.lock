@@ -1,8 +1,12 @@
-[ "calliope": {:git, "git://github.com/nurugger07/calliope.git", "e1142876c2c7c4d970161d25f945523c832a56d6", []},
+[ "active": {:git, "git://github.com/proger/active.git", "8a8d2da6b309bbeae96adf45ab1d696172cde3aa", []},
+  "calliope": {:git, "git://github.com/nurugger07/calliope.git", "e1142876c2c7c4d970161d25f945523c832a56d6", []},
   "cowboy": {:git, "git://github.com/extend/cowboy.git", "b09f3a570d702be7a55c36e5f5b4b63b26198637", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "63298e8e160031a70efff86a1acde7e7db1fcda6", [ref: "0.4.0"]},
   "derp": {:git, "git://github.com/meh/derp.git", "9eca5c5680cd7d61c5182da23840e280b009a57f", []},
+  "erlfsmon": {:git, "git://github.com/proger/erlfsmon", "12759ab5e531d89768e14078f130daf9e5969749", [ref: "HEAD"]},
+  "erlsh": {:git, "https://github.com/proger/erlsh", "490aa8f2ce80810d7aa3c0125c9fb34706004d70", [ref: "HEAD"]},
   "inflex": {:git, "git://github.com/nurugger07/inflex.git", "98cb2fe2b1ac823518e552b0e5b24ee32b0bc7b1", []},
   "phoenix": {:git, "git://github.com/nurugger07/phoenix.git", "64eb33664de760ad77cdb0bc6f5d1783b2c56433", [branch: "render_haml_with_calliope"]},
   "plug": {:git, "git://github.com/elixir-lang/plug.git", "c86ee91fd8316da6f4ef2a7ab9f471b93a80857b", []},
-  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]} ]
+  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]},
+  "sync": {:git, "git://github.com/rustyio/sync.git", "4f032ec717cc139d717fe3032e9d4f0e55032fa9", []} ]

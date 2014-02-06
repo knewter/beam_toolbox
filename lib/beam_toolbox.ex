@@ -14,7 +14,7 @@ defmodule BeamToolbox do
         [
           {"Integration Testing",
             [
-              {"Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"}
+              {"hut", "http://amrita.io", "http://github.com/josephwilk/amrita"}
             ]
           },
           {"General Testing",
@@ -24,6 +24,21 @@ defmodule BeamToolbox do
               {"Triq", "https://github.com/krestenkrab/triq", "https://github.com/krestenkrab/triq"},
               {"test_server", "http://www.erlang.org/doc/man/test_server.html", ""},
               {"tsung", "http://tsung.erlang-projects.org/", "https://github.com/processone/tsung"}
+            ]
+          }
+        ]
+      },
+      {"Development Tools",
+        [
+          {"Code Reloading",
+            [
+              {"sync", "https://github.com/rustyio/sync", "https://github.com/rustyio/sync"},
+              {"active", "https://github.com/proger/active", "https://github.com/proger/active"}
+            ]
+          },
+          {"File System Monitoring",
+            [
+              {"erlfsmon", "https://github.com/proger/erlfsmon", "https://github.com/proger/erlfsmon"}
             ]
           }
         ]
