@@ -22,7 +22,7 @@ defmodule BeamToolbox.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:phoenix, github: "nurugger07/phoenix", branch: "render_haml_with_calliope"},
+      {:phoenix, github: "knewter/phoenix", branch: "render_haml_with_calliope"},
       {:derp,    github: "meh/derp"}
     ]
   end
