@@ -7,15 +7,22 @@ defmodule BeamToolbox.Model do
       end
 
       def find(data, expected_name) do
-        Enum.find(data, fn({tag, name, _children}) -> name == expected_name end)
+        Enum.find(data, fn(data) -> name(data) == expected_name end)
       end
 
-      defp list([{tag, title, _children}|rest], acc) do
-        list(rest, [title|acc])
+      defp list([data|rest], acc) do
+        list(rest, [name(data)|acc])
       end
       defp list([], acc) do
         Enum.reverse(acc)
       end
+
+      ### Required overridden functions
+      def name(data) do
+        throw "You must implement the `name/1` function in order to use BeamToolbox.Model correctly."
+      end
+
+      defoverridable [name: 1]
     end
   end
 end

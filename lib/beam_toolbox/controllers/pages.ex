@@ -1,5 +1,8 @@
 defmodule BeamToolbox.Controllers.Pages do
   use Phoenix.Controller
+  alias BeamToolbox.Models.CategoryGroup
+  alias BeamToolbox.Models.Category
+  alias BeamToolbox.Models.Project
 
   def show(conn) do
     render_view("show", conn, [category_groups: render_category_groups])
@@ -17,14 +20,14 @@ defmodule BeamToolbox.Controllers.Pages do
   defp partial(name), do: File.read!("priv/views/pages/_#{name}.html.haml")
 
   defp render_category_groups do
-    BeamToolbox.project_data
+    BeamToolbox.Data.category_groups
       |> render_collection(&category_group_html/1)
   end
 
-  defp category_group_html({name, categories}) do
+  defp category_group_html(category_group) do
     render_partial("category_group", [
-      name: name,
-      categories: render_categories(categories)
+      name: CategoryGroup.name(category_group),
+      categories: render_categories(CategoryGroup.categories(category_group))
     ])
   end
 
@@ -32,10 +35,10 @@ defmodule BeamToolbox.Controllers.Pages do
     categories |> render_collection(&category_html/1)
   end
 
-  defp category_html({name, projects}) do
+  defp category_html(category) do
     render_partial("category", [
-      name: name,
-      projects: render_projects(projects)
+      name: Category.name(category),
+      projects: render_projects(Category.projects(category))
     ])
   end
 
@@ -43,11 +46,11 @@ defmodule BeamToolbox.Controllers.Pages do
     projects |> render_collection(&project_html/1)
   end
 
-  defp project_html({name, url, github_url}) do
+  defp project_html(project) do
     render_partial("project", [
-      name: name,
-      url: url,
-      github_url: github_url
+      name: Project.name(project),
+      url: Project.website(project),
+      github_url: Project.github(project)
     ])
   end
 
