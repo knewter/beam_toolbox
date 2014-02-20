@@ -1,5 +1,6 @@
 defmodule BeamToolbox.Controllers.Pages do
-  use Phoenix.Controller
+  use BeamToolbox.Controller, views_dir: "pages"
+
   alias BeamToolbox.Models.CategoryGroup
   alias BeamToolbox.Models.Category
   alias BeamToolbox.Models.Project
@@ -7,17 +8,6 @@ defmodule BeamToolbox.Controllers.Pages do
   def show(conn) do
     render_view("show", conn, [category_groups: render_category_groups])
   end
-
-  defp render_view(name, conn), do: render_view(name, conn, [])
-  defp render_view(name, conn, data) do
-    html(conn, render(view(name), data))
-  end
-  defp view(name), do: File.read!("priv/views/pages/#{name}.html.haml")
-
-  defp render_partial(name, data) do
-    partial(name) |> render(data)
-  end
-  defp partial(name), do: File.read!("priv/views/pages/_#{name}.html.haml")
 
   defp render_category_groups do
     BeamToolbox.Data.category_groups
@@ -52,11 +42,5 @@ defmodule BeamToolbox.Controllers.Pages do
       url: Project.website(project),
       github_url: Project.github(project)
     ])
-  end
-
-  defp render_collection(collection, renderer) do
-    collection
-      |> Enum.map(renderer)
-      |> Enum.join
   end
 end
