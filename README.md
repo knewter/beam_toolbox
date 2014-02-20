@@ -79,8 +79,7 @@ Fetch the elixir app's dependencies with:
 mix deps.get
 ```
 
-There aren't yet any tests for the elixir code, as it's all prototyping work at
-present, but when there are you can run the tests with:
+You can run the tests with:
 
 ```sh
 mix test

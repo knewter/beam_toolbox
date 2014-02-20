@@ -2,7 +2,12 @@
   "cowboy": {:git, "git://github.com/extend/cowboy.git", "903594bb8709db4fa98697ecf8adbdccabf64a83", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "2e0fc55f71bfeb543fd2218abed85890ff1e3e82", [ref: "0.5.0"]},
   "derp": {:git, "git://github.com/meh/derp.git", "9b5f929f30df64415607fbb29e49ee7a96ff8379", []},
+  "ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "dc0397d15686315dad653ed13c4836e4c6ef54e3", []},
+  "hound": {:git, "git://github.com/HashNuke/hound.git", "52b1b48a5ae35bf4f1a97d3d63f9f887a58a92ca", [tag: "v0.5.2"]},
+  "ibrowse": {:git, "git://github.com/cmullaparthi/ibrowse.git", "e8ae353c16d4f0897abb9f80025b52925b974dd1", [tag: "v4.0.2"]},
   "inflex": {:git, "git://github.com/nurugger07/inflex.git", "b1ab93e694fb2e6ba4721b5de26382c85e355068", []},
+  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "3db1d520e00fb28c3eee4e5b30645d5878037c38", []},
+  "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "e50af6e109cb03bd26acf715cbc77de746507d1d", [tag: "v1.4.3"]},
   "phoenix": {:git, "git://github.com/knewter/phoenix.git", "68020701c3a445360cb5f536125f25223f8edcb2", [branch: "render_haml_with_calliope"]},
   "plug": {:git, "git://github.com/elixir-lang/plug.git", "be264547dc45d1fce756794ae39df01ed2f53677", []},
   "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]} ]
