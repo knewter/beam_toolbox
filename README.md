@@ -79,7 +79,10 @@ Fetch the elixir app's dependencies with:
 mix deps.get
 ```
 
-You can run the tests with:
+The integration tests depend on having a webdriver running.  I typically use
+chromedriver.  Run it in a separate console with `chromedriver`.
+
+Then you can run the tests with:
 
 ```sh
 mix test
