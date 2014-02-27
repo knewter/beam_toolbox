@@ -1,4 +1,6 @@
 defmodule BeamToolbox.Controller do
+  import Phoenix.Controller
+
   defmacro __using__(opts) do
     {:ok, views_dir} = Keyword.fetch(opts, :views_dir)
     quote do
