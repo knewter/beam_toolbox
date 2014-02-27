@@ -63,7 +63,6 @@ We use compass/sass for css.  This requires ruby.  To install compass, do the
 following:
 
 ```sh
-. .rvmrc
 bundle
 ```
 
