@@ -23,7 +23,8 @@ defmodule BeamToolbox.Mixfile do
   defp deps do
     [
       {:phoenix, github: "knewter/phoenix", branch: "render_haml_with_calliope"},
-      {:derp,    github: "meh/derp"}
+      {:derp,    github: "meh/derp"},
+      {:hound,   github: "knewter/hound", branch: "feature/elixir_v0.13_support"}
     ]
   end
 end

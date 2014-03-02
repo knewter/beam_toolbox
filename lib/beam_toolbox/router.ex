@@ -9,6 +9,6 @@ defmodule BeamToolbox.Router do
           ]}
         ]
 
-  get "pages/:page", Controllers.Pages, :show, as: :page
-  get "projects/:project", Controllers.Projects, :show, as: :project
+  get "/pages/:page", Controllers.Pages, :show, as: :page
+  get "/projects/:project", Controllers.Projects, :show, as: :project
 end
