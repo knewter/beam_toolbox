@@ -3,6 +3,7 @@ defmodule BeamToolbox.Controllers.Pages do
   alias BeamToolbox.Models.CategoryGroup
   alias BeamToolbox.Models.Category
   alias BeamToolbox.Models.Project
+  alias BeamToolbox.Router
 
   def show(conn) do
     render_view("show", conn, [category_groups: render_category_groups])
@@ -37,6 +38,7 @@ defmodule BeamToolbox.Controllers.Pages do
 
   defp project_html(project) do
     render_partial("project", [
+      project_path: Router.project_path(project: Project.name(project)),
       name: Project.name(project),
       url: Project.website(project),
       github_url: Project.github(project)

@@ -3,10 +3,9 @@ defmodule BeamToolbox.Models.ProjectTest do
   alias BeamToolbox.Models.Project
 
   @test_data [
-      # tag      name         website                          github
-      {:project, "sync",   "https://github.com/rustyio/sync",  "https://github.com/rustyio/sync"},
-      {:project, "active", "https://github.com/proger/active", "https://github.com/proger/active"}
-    ]
+    %Project{name: "sync", website: "https://github.com/rustyio/sync", github: "https://github.com/rustyio/sync"},
+    %Project{name: "active", website: "https://github.com/proger/active", github: "https://github.com/proger/active"}
+  ]
 
   test "Listing Projects" do
     assert ["sync", "active"] == @test_data |> Project.list

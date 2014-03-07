@@ -3,10 +3,10 @@ defmodule BeamToolbox.Models.CategoryGroupTest do
   alias BeamToolbox.Models.CategoryGroup
 
   @test_data [
-      {:category_group, "Testing", []},
-      {:category_group, "Development Tools", []},
-      {:category_group, "HTML and Markup", []}
-    ]
+    %CategoryGroup{name: "Testing", categories: []},
+    %CategoryGroup{name: "Development Tools", categories: []},
+    %CategoryGroup{name: "HTML and Markup", categories: []}
+  ]
 
   test "Listing CategoryGroups" do
     assert ["Testing", "Development Tools", "HTML and Markup"] == @test_data |> CategoryGroup.list

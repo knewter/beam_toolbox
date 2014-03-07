@@ -1,42 +1,46 @@
 defmodule BeamToolbox.Data do
+  alias BeamToolbox.Models.CategoryGroup
+  alias BeamToolbox.Models.Category
+  alias BeamToolbox.Models.Project
+
   ## FIXTURES / DUMMY DATA
   def category_groups do
     [
-      {:category_group, "Testing",
+      %CategoryGroup{name: "Testing", categories:
         [
-          {:category, "Integration Testing",
+          %Category{name: "Integration Testing", projects:
             [
-              {:project, "Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"},
-              {:project, "Hound", "https://github.com/HashNuke/hound", "https://github.com/HashNuke/hound"}
+              %Project{name: "Amrita", website: "http://amrita.io", github: "http://github.com/josephwilk/amrita"},
+              %Project{name: "Hound", website: "https://github.com/HashNuke/hound", github: "https://github.com/HashNuke/hound"}
             ]
           },
-          {:category, "General Testing",
+          %Category{name: "General Testing", projects:
             [
-              {:project, "Common Test", "http://www.erlang.org/doc/apps/common_test/basics_chapter.html", ""},
-              {:project, "EUnit", "http://www.erlang.org/doc/apps/eunit/chapter.html", ""},
-              {:project, "Triq", "https://github.com/krestenkrab/triq", "https://github.com/krestenkrab/triq"},
-              {:project, "test_server", "http://www.erlang.org/doc/man/test_server.html", ""},
-              {:project, "tsung", "http://tsung.erlang-projects.org/", "https://github.com/processone/tsung"}
+              %Project{name: "Common Test", website: "http://www.erlang.org/doc/apps/common_test/basics_chapter.html", github: ""},
+              %Project{name: "EUnit", website: "http://www.erlang.org/doc/apps/eunit/chapter.html", github: ""},
+              %Project{name: "Triq", website: "https://github.com/krestenkrab/triq", github: "https://github.com/krestenkrab/triq"},
+              %Project{name: "test_server", website: "http://www.erlang.org/doc/man/test_server.html", github: ""},
+              %Project{name: "tsung", website: "http://tsung.erlang-projects.org/", github: "https://github.com/processone/tsung"}
             ]
           }
         ]
       },
-      {:category_group, "Development Tools",
+      %CategoryGroup{name: "Development Tools", categories:
         [
-          {:category, "Code Reloading",
+          %Category{name: "Code Reloading", projects:
             [
-              {:project, "sync", "https://github.com/rustyio/sync", "https://github.com/rustyio/sync"},
-              {:project, "active", "https://github.com/proger/active", "https://github.com/proger/active"}
+              %Project{name: "sync", website: "https://github.com/rustyio/sync", github: "https://github.com/rustyio/sync"},
+              %Project{name: "active", website: "https://github.com/proger/active", github: "https://github.com/proger/active"}
             ]
           },
-          {:category, "File System Monitoring",
+          %Category{name: "File System Monitoring", projects:
             [
-              {:project, "erlfsmon", "https://github.com/proger/erlfsmon", "https://github.com/proger/erlfsmon"}
+              %Project{name: "erlfsmon", website: "https://github.com/proger/erlfsmon", github: "https://github.com/proger/erlfsmon"}
             ]
           }
         ]
       },
-      {:category_group, "HTML and Markup",
+      %CategoryGroup{name: "HTML and Markup", categories:
         []
       }
     ]
