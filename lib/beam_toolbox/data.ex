@@ -45,4 +45,14 @@ defmodule BeamToolbox.Data do
       }
     ]
   end
+
+  def categories do
+    Enum.map(category_groups, fn(%CategoryGroup{categories: categories}) -> categories end)
+      |> List.flatten
+  end
+
+  def projects do
+    Enum.map(categories, fn(%Category{projects: projects}) -> projects end)
+      |> List.flatten
+  end
 end

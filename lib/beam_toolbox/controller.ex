@@ -5,11 +5,16 @@ defmodule BeamToolbox.Controller do
     {:ok, views_dir} = Keyword.fetch(opts, :views_dir)
     quote do
       use Phoenix.Controller
+      alias BeamToolbox.Router
 
       defp render_view(name, conn), do: render_view(name, conn, [])
       defp render_view(name, conn, data) do
+        {sidebar, data} = data |> Dict.pop(:sidebar)
         rendered_view = render(view(name), data)
-        rendered_layout = render(layout("application"), [content: rendered_view])
+        rendered_layout = render(layout("application"), [
+          content: rendered_view,
+          sidebar: sidebar || ""
+        ])
         html(conn, rendered_layout)
       end
       defp view(name), do: File.read!("priv/views/#{unquote(views_dir)}/#{name}.html.haml")

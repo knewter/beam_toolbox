@@ -1,6 +1,7 @@
 defmodule BeamToolbox.Controllers.Projects do
   use BeamToolbox.Controller, views_dir: "projects"
   alias BeamToolbox.Models.Project
+  alias BeamToolbox.Data
 
   def show(conn) do
     render_view("show", conn, project_params(conn.params["project"]))
@@ -17,12 +18,29 @@ defmodule BeamToolbox.Controllers.Projects do
       stargazers_count: (inspect Project.Statistics.stargazers_count(project.github)),
       forks_count: (inspect Project.Statistics.forks_count(project.github)),
       description: Project.Statistics.description(project.github),
-      readme: project |> Project.readme
+      readme: project |> Project.readme,
+      sidebar: render_related_projects(project)
     ]
   end
 
-  defp fetch_project(_project_name) do
-    # TODO: Actually fetch the proper project from the data layer
-    %Project{name: "Amrita", website: "http://amrita.io", github: "josephwilk/amrita"}
+  defp fetch_project(project_name) do
+    Data.projects
+      |> Enum.filter(fn(%Project{name: name}) -> name == project_name end)
+      |> hd
+  end
+
+  defp render_related_projects(project) do
+    related_projects = Project.related_projects(project)
+      |> Enum.map(fn(project) ->
+           render_partial("related_project",
+             name: project.name,
+             path: Router.project_path(project: project.name)
+           )
+         end)
+      |> Enum.join
+    render_partial("related_projects",
+      category: Project.category(project).name,
+      related_projects: related_projects
+    )
   end
 end

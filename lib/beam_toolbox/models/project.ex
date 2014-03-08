@@ -2,6 +2,18 @@ defmodule BeamToolbox.Models.Project do
   defstruct [:name, :website, :github]
   use BeamToolbox.Model
   alias BeamToolbox.Mock.GitHub
+  alias BeamToolbox.Data
+
+  def category(project) do
+    Data.categories
+      |> Enum.filter(fn(c) -> Enum.member?(c.projects, project) end)
+      |> hd
+  end
+
+  def related_projects(project) do
+    category(project).projects
+      |> Enum.filter(fn(proj) -> proj !== project end)
+  end
 
   def readme_raw(project), do: GitHub.Raw.readme(project.github)
   def readme(project), do: project |> readme_raw |> Markdown.to_html(tables: true, fenced_code: true, autolink: true)
