@@ -27,7 +27,8 @@ defmodule BeamToolbox.Mixfile do
       {:hound,   github: "knewter/hound", branch: "feature/elixir_v0.13_support"},
       {:httpoison, github: "knewter/httpoison", branch: "0.13_application_start_fix" },
       {:ibrowse, "~> 4.0.1", github: "cmullaparthi/ibrowse", override: true},
-      {:exlager, github: "khia/exlager"}
+      {:exlager, github: "khia/exlager"},
+      {:markdown, github: "zambal/markdown"}
     ]
   end
 end

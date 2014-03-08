@@ -8,6 +8,7 @@ defmodule BeamToolbox.Controllers.Projects do
 
   defp project_params(project_name) do
     project = fetch_project(project_name)
+    readme = Project.readme(project)
     [
       name: project.name,
       website: project.website,
@@ -16,9 +17,12 @@ defmodule BeamToolbox.Controllers.Projects do
       #latest_commit_date: Project.Statistics.latest_commit_date(project.github),
       #stargazers_count: (inspect Project.Statistics.stargazers_count(project.github)),
       #forks_count: (inspect Project.Statistics.forks_count(project.github))
+      #description: Project.statistics.description(project.github)
+      readme: readme,
       latest_commit_date: "lcd",
       stargazers_count: "15",
-      forks_count: "42"
+      forks_count: "42",
+      description: "This thing, you know?  It's pretty cool..."
     ]
   end
 

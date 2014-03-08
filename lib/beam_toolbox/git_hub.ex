@@ -36,4 +36,25 @@ defmodule BeamToolbox.GitHub do
   defp commits_path(repo_ident), do: repo_path(repo_ident) <> "/commits"
   defp stargazers_path(repo_ident), do: repo_path(repo_ident) <> "/stargazers"
   defp forks_path(repo_ident), do: repo_path(repo_ident) <> "/forks"
+
+  defmodule Raw do
+    use HTTPoison.Base
+
+    def readme(repo_ident) do
+      repo_ident |> readme_path |> get_body
+    end
+
+    defp readme_path(repo_ident), do: "#{repo_ident}/master/README.md"
+
+    defp get_body(path) do
+      get(path).body
+    end
+
+    defp process_url(url) do
+      "https://raw.github.com/" <> url
+    end
+    defp process_response_body body do
+      body
+    end
+  end
 end

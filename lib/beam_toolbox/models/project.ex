@@ -1,10 +1,13 @@
 defmodule BeamToolbox.Models.Project do
   defstruct [:name, :website, :github]
   use BeamToolbox.Model
+  alias BeamToolbox.GitHub
+  alias BeamToolbox.Mock
+
+  def readme_raw(project), do: Mock.GitHub.Raw.readme(project.github)
+  def readme(project), do: project |> readme_raw |> Markdown.to_html(tables: true, fenced_code: true, autolink: true)
 
   defmodule Statistics do
-    alias BeamToolbox.GitHub
-
     def stargazers_count(""), do: "N/A"
     def stargazers_count(repo_ident) do
       GitHub.stargazers(repo_ident)

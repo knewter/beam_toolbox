@@ -1,5 +1,5 @@
 .project
-  %h3.name= name
+  %h2.name= name
 
   .card
     .title
@@ -15,3 +15,5 @@
       %li.metadatum
         .key Latest Commit Date
         .value= latest_commit_date
+    .description= description
+    .readme= Safe.script(readme)
