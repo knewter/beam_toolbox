@@ -1,6 +1,9 @@
+$lighter-text: #666;
+$default-text: #333;
+
 .card {
   @extend .panel;
-  color: #333;
+  color: $default-text;
   .title {
     font-size: 1.5em;
     .github_icon {
@@ -22,7 +25,7 @@
     margin-top: 1em;
     .metadatum {
       .key {
-        color: #999
+        color: $lighter-text;
       }
     }
   }
@@ -32,5 +35,22 @@
   h3 {
     font-size: 1.2em;
     font-weight: bold;
+  }
+  .readme {
+    p {
+      color: $lighter-text;
+    }
+    ul {
+      margin-left: 1em;
+      li {
+        color: $lighter-text;
+      }
+    }
+    pre {
+      code {
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
   }
 }

@@ -5,6 +5,7 @@
     .title
       .github_icon
       %a{ href: github_url }= github
+    .description= description
     %ul.metadata
       %li.metadatum
         .key Stargazers
@@ -15,5 +16,4 @@
       %li.metadatum
         .key Latest Commit Date
         .value= latest_commit_date
-    .description= description
     .readme= Safe.script(readme)

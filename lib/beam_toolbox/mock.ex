@@ -1,7 +1,30 @@
 defmodule BeamToolbox.Mock do
   defmodule GitHub do
+    def stargazers(_) do
+      [1, 2, 3]
+    end
+
+    def forks(_) do
+      [1, 2, 3, 4, 5]
+    end
+
+    def latest_commit(_) do
+      [
+        {"commit", [
+            {"committer", [
+              {"date", "mock date"}
+            ]}
+        ]}
+      ]
+    end
+
+    def repo(_) do
+      File.read!("priv/mock/github/repo.json")
+        |> JSEX.decode!
+    end
+
     defmodule Raw do
-      def readme(repo_ident) do
+      def readme(_) do
         """
 # BEAM Toolbox
 

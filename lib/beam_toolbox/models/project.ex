@@ -1,28 +1,29 @@
 defmodule BeamToolbox.Models.Project do
   defstruct [:name, :website, :github]
   use BeamToolbox.Model
-  alias BeamToolbox.GitHub
-  alias BeamToolbox.Mock
+  alias BeamToolbox.Mock.GitHub
 
-  def readme_raw(project), do: Mock.GitHub.Raw.readme(project.github)
+  def readme_raw(project), do: GitHub.Raw.readme(project.github)
   def readme(project), do: project |> readme_raw |> Markdown.to_html(tables: true, fenced_code: true, autolink: true)
 
   defmodule Statistics do
+    import Enum
+
     def stargazers_count(""), do: "N/A"
-    def stargazers_count(repo_ident) do
-      GitHub.stargazers(repo_ident)
-        |> Enum.count
-    end
+    def stargazers_count(repo_ident), do: repo_ident |> GitHub.stargazers |> count
 
     def forks_count(""), do: "N/A"
-    def forks_count(repo_ident) do
-      GitHub.forks(repo_ident)
-        |> Enum.count
-    end
+    def forks_count(repo_ident), do: repo_ident |> GitHub.forks |> count
 
     def latest_commit_date(""), do: "N/A"
     def latest_commit_date(repo_ident) do
       GitHub.latest_commit(repo_ident)["commit"]["committer"]["date"]
+    end
+
+    def description(""), do: "N/A"
+    def description(repo_ident) do
+      repo = repo_ident |> GitHub.repo
+      repo["description"]
     end
   end
 end
