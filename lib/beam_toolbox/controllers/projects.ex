@@ -9,14 +9,21 @@ defmodule BeamToolbox.Controllers.Projects do
   defp project_params(project_name) do
     project = fetch_project(project_name)
     [
-      name: Project.name(project),
-      website: Project.website(project),
-      github: Project.github(project)
+      name: project.name,
+      website: project.website,
+      github: project.github,
+      github_url: "http://github.com/" <> project.github,
+      #latest_commit_date: Project.Statistics.latest_commit_date(project.github),
+      #stargazers_count: (inspect Project.Statistics.stargazers_count(project.github)),
+      #forks_count: (inspect Project.Statistics.forks_count(project.github))
+      latest_commit_date: "lcd",
+      stargazers_count: "15",
+      forks_count: "42"
     ]
   end
 
   defp fetch_project(_project_name) do
     # TODO: Actually fetch the proper project from the data layer
-    {:project, "Amrita", "http://amrita.io", "http://github.com/josephwilk/amrita"}
+    %Project{name: "Amrita", website: "http://amrita.io", github: "josephwilk/amrita"}
   end
 end

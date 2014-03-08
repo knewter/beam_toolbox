@@ -16,8 +16,8 @@ defmodule BeamToolbox.Controllers.Pages do
 
   defp category_group_html(category_group) do
     render_partial("category_group", [
-      name: CategoryGroup.name(category_group),
-      categories: render_categories(CategoryGroup.categories(category_group))
+      name: category_group.name,
+      categories: render_categories(category_group.categories)
     ])
   end
 
@@ -27,8 +27,8 @@ defmodule BeamToolbox.Controllers.Pages do
 
   defp category_html(category) do
     render_partial("category", [
-      name: Category.name(category),
-      projects: render_projects(Category.projects(category))
+      name: category.name,
+      projects: render_projects(category.projects)
     ])
   end
 
@@ -38,10 +38,10 @@ defmodule BeamToolbox.Controllers.Pages do
 
   defp project_html(project) do
     render_partial("project", [
-      project_path: Router.project_path(project: Project.name(project)),
-      name: Project.name(project),
-      url: Project.website(project),
-      github_url: Project.github(project)
+      project_path: Router.project_path(project: project.name),
+      name: project.name,
+      url: project.website,
+      github_url: project.github
     ])
   end
 end

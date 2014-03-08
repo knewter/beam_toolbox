@@ -5,3 +5,4 @@ erl_crash.dump
 /priv/static/stylesheets/*
 *.beam
 .sass-cache
+log

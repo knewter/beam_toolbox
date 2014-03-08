@@ -1,0 +1,35 @@
+.card {
+  @extend .panel;
+  color: #333;
+  .title {
+    font-size: 1.5em;
+    .github_icon {
+      display: inline-block;
+      margin-right: 1em;
+      height: 32px;
+      width: 32px;
+      background-image: url("/images/GitHub-Mark-32px.png");
+      background-repeat: no-repeat;
+    }
+    a {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+  }
+  .metadata {
+    @include block-grid(4);
+    margin-top: 1em;
+    .metadatum {
+      .key {
+        color: #999
+      }
+    }
+  }
+}
+
+.project {
+  h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}

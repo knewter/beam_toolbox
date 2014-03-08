@@ -1,7 +1,17 @@
-%h2.project_name= name
+.project
+  %h3.name= name
 
-%h3 Website
-%span.project_website= website
-
-%h3 GitHub
-%span.project_github= github
+  .card
+    .title
+      .github_icon
+      %a{ href: github_url }= github
+    %ul.metadata
+      %li.metadatum
+        .key Stargazers
+        .value= stargazers_count
+      %li.metadatum
+        .key Forks
+        .value= forks_count
+      %li.metadatum
+        .key Latest Commit Date
+        .value= latest_commit_date

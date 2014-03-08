@@ -5,6 +5,7 @@ defmodule BeamToolbox.Router do
         dispatch: [
           { :_, [
               {"/stylesheets/[...]", :cowboy_static, {:dir, "priv/static/stylesheets"}},
+              {"/images/[...]", :cowboy_static, {:dir, "priv/static/images"}},
               {:_, Plug.Adapters.Cowboy.Handler, { __MODULE__, [] }}
           ]}
         ]

@@ -6,13 +6,9 @@ defmodule BeamToolbox.Supervisor do
   end
 
   def init([]) do
-    children = [
-      # Define workers and child supervisors to be supervised
-      # worker(BeamToolbox.Worker, [])
-    ]
-
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html
     # for other strategies and supported options
+    children = []
     supervise(children, strategy: :one_for_one)
   end
 end
