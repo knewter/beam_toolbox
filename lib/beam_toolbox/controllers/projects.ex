@@ -1,7 +1,5 @@
 defmodule BeamToolbox.Controllers.Projects do
   use BeamToolbox.Controller, views_dir: "projects"
-  alias BeamToolbox.Models.Project
-  alias BeamToolbox.Data
 
   def show(conn) do
     render_view("show", conn, project_params(conn.params["project"]))
@@ -25,7 +23,7 @@ defmodule BeamToolbox.Controllers.Projects do
 
   defp fetch_project(project_name) do
     Data.projects
-      |> Enum.filter(fn(%Project{name: name}) -> name == project_name end)
+      |> Enum.filter(fn(%Project{name: name}) -> Model.slug(name) == project_name end)
       |> hd
   end
 
@@ -34,7 +32,7 @@ defmodule BeamToolbox.Controllers.Projects do
       |> Enum.map(fn(project) ->
            render_partial("related_project",
              name: project.name,
-             path: Router.project_path(project: project.name)
+             path: Router.project_path(project: Model.slug(project.name))
            )
          end)
       |> Enum.join

@@ -6,6 +6,12 @@ defmodule BeamToolbox.Controller do
     quote do
       use Phoenix.Controller
       alias BeamToolbox.Router
+      alias BeamToolbox.Models.Category
+      alias BeamToolbox.Data
+      alias BeamToolbox.Model
+      alias BeamToolbox.Models.Project
+      alias BeamToolbox.Models.Category
+      alias BeamToolbox.Models.CategoryGroup
 
       defp render_view(name, conn), do: render_view(name, conn, [])
       defp render_view(name, conn, data) do
