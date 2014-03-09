@@ -12,7 +12,7 @@ defmodule BeamToolbox.Mock do
       [
         {"commit", [
             {"committer", [
-              {"date", "mock date"}
+              {"date", "2014-03-02T04:54:17Z"}
             ]}
         ]}
       ]

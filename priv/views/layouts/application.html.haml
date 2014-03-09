@@ -3,10 +3,18 @@
     %title BEAM Toolbox
     %link{rel: "stylesheet", href: "/stylesheets/app.css", charset: "utf-8"}
   %body
-    .row
-      .large-12.columns
-        .panel
-          %h1 BEAM Toolbox
+    %nav.top-bar
+      %ul.title-area
+        %li.name
+          %h1
+            %a{href: "/pages/home"} BEAM Toolbox
+        %li.toggle-topbar.menu-icon
+          %a{href: '#'} Menu
+      %section.top-bar-section
+        %ul.right
+        %ul.left
+          %li
+            %a{href: "/categories"} Categories
 
     .row
       .large-9.columns.main-content

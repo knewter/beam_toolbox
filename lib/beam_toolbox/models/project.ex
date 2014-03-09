@@ -1,7 +1,7 @@
 defmodule BeamToolbox.Models.Project do
   defstruct [:name, :website, :github]
   use BeamToolbox.Model
-  alias BeamToolbox.Mock.GitHub
+  alias BeamToolbox.GitHub
   alias BeamToolbox.Data
 
   def category(project) do
