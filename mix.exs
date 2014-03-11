@@ -28,7 +28,7 @@ defmodule BeamToolbox.Mixfile do
       {:httpoison, github: "knewter/httpoison", branch: "0.13_application_start_fix" },
       {:ibrowse, "~> 4.0.1", github: "cmullaparthi/ibrowse", override: true},
       {:exlager, github: "khia/exlager"},
-      {:markdown, github: "zambal/markdown"}
+      {:markdown, github: "knewter/markdown", branch: "feature/0.13-support"}
     ]
   end
 end
