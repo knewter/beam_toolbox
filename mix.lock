@@ -1,4 +1,5 @@
-[ "calliope": {:git, "git://github.com/nurugger07/calliope.git", "bda60dd97a16490d054c62a29a5a04b103f36803", []},
+[ "cadfaerl": {:git, "git://github.com/ddossot/cadfaerl.git", "2be603d0aa7aca9a42e61534807c996c3cbd7be2", []},
+  "calliope": {:git, "git://github.com/nurugger07/calliope.git", "bda60dd97a16490d054c62a29a5a04b103f36803", []},
   "cowboy": {:git, "git://github.com/extend/cowboy.git", "8993249e421fbfff603cedec70e90be64d3694e6", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "0d4ece08a7cce90a07cf33d4edad29bc324c7d90", [ref: "0.5.1"]},
   "derp": {:git, "git://github.com/meh/derp.git", "7ed055d860292cb590d6505f44876c0311eef546", []},
