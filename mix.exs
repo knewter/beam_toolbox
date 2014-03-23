@@ -15,7 +15,10 @@ defmodule BeamToolbox.Mixfile do
         :exlager,
         :kernel,
         :stdlib,
-        :elixir
+        :elixir,
+        :cadfaerl,
+        :phoenix,
+        :calliope
       ],
       mod: { BeamToolbox, [] }
     ]

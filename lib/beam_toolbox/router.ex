@@ -4,8 +4,8 @@ defmodule BeamToolbox.Router do
         port: 4000,
         dispatch: [
           { :_, [
-              {"/stylesheets/[...]", :cowboy_static, {:dir, "priv/static/stylesheets"}},
-              {"/images/[...]", :cowboy_static, {:dir, "priv/static/images"}},
+              {"/stylesheets/[...]", :cowboy_static, {:dir, "#{:code.lib_dir(:beam_toolbox, :priv)}/static/stylesheets"}},
+              {"/images/[...]", :cowboy_static, {:dir, "#{:code.lib_dir(:beam_toolbox, :priv)}/static/images"}},
               {:_, Plug.Adapters.Cowboy.Handler, { __MODULE__, [] }}
           ]}
         ]

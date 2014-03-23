@@ -23,18 +23,22 @@ defmodule BeamToolbox.Controller do
         ])
         html(conn, rendered_layout)
       end
-      defp view(name), do: File.read!("priv/views/#{unquote(views_dir)}/#{name}.html.haml")
-      defp layout(name), do: File.read!("priv/views/layouts/#{name}.html.haml")
+      defp view(name), do: read_priv("/views/#{unquote(views_dir)}/#{name}.html.haml")
+      defp layout(name), do: read_priv("/views/layouts/#{name}.html.haml")
 
       defp render_partial(name, data) do
         partial(name) |> render(data)
       end
-      defp partial(name), do: File.read!("priv/views/#{unquote(views_dir)}/_#{name}.html.haml")
+      defp partial(name), do: read_priv("/views/#{unquote(views_dir)}/_#{name}.html.haml")
 
       defp render_collection(collection, renderer) do
         collection
           |> Enum.map(renderer)
           |> Enum.join
+      end
+
+      defp read_priv(path) do
+        File.read!("#{:code.lib_dir(:beam_toolbox, :priv)}#{path}")
       end
     end
   end
