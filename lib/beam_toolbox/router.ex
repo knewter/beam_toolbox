@@ -14,4 +14,6 @@ defmodule BeamToolbox.Router do
   get "/projects/:project", Controllers.Projects, :show, as: :project
   get "/categories", Controllers.Categories, :index, as: :categories
   get "/categories/:category", Controllers.Categories, :show, as: :category
+
+  def start_link, do: start
 end
