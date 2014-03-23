@@ -1,4 +1,4 @@
-[ "cadfaerl": {:git, "git://github.com/ddossot/cadfaerl.git", "2be603d0aa7aca9a42e61534807c996c3cbd7be2", []},
+%{"cadfaerl": {:git, "git://github.com/ddossot/cadfaerl.git", "2be603d0aa7aca9a42e61534807c996c3cbd7be2", []},
   "calliope": {:git, "git://github.com/nurugger07/calliope.git", "bda60dd97a16490d054c62a29a5a04b103f36803", []},
   "cowboy": {:git, "git://github.com/extend/cowboy.git", "8993249e421fbfff603cedec70e90be64d3694e6", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "0d4ece08a7cce90a07cf33d4edad29bc324c7d90", [ref: "0.5.1"]},
@@ -7,6 +7,7 @@
   "ex_conf": {:git, "git://github.com/phoenixframework/ex_conf.git", "4ca0cbf65c70d1ce787834a0988338729dcf4098", []},
   "ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "c14203bfca186f68ff178e5ada9af4f5fb37e205", []},
   "exlager": {:git, "git://github.com/khia/exlager.git", "779a75350c6bf6a30b779f6d63e2d50a94c4d9a1", []},
+  "exrm": {:git, "git://github.com/bitwalker/exrm.git", "6f99c6c65a09185dd1acac900a2bd31225d18253", []},
   "goldrush": {:git, "git://github.com/DeadZen/goldrush.git", "71e63212f12c25827e0c1b4198d37d5d018a7fec", [tag: "0.1.6"]},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "448025a8856b66da550ad8bb96a26477523f9f66", [tag: "0.11.1"]},
   "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "bf4e6fde4dd6e08b7434af7b092596b3633a872c", [tag: "0.2.4"]},
@@ -24,4 +25,4 @@
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]},
   "phoenix": {:git, "git://github.com/knewter/phoenix.git", "949e669d262f592645f52b9e301bf6df212024ce", [branch: "render_haml_with_calliope"]},
   "plug": {:git, "git://github.com/elixir-lang/plug.git", "fce879565115427239e650ae690455565b2fafee", []},
-  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]} ]
+  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]}}

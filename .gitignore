@@ -6,3 +6,5 @@ erl_crash.dump
 *.beam
 .sass-cache
 log
+rel
+relx
