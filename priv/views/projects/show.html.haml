@@ -1,10 +1,11 @@
 .project
-  %h2.name= name
+  %h2.name.project_name= name
+  %h3.website= website
 
   .card
     .title
       .github_icon
-      %a{ href: github_url }= github
+      %a.github{ href: github_url }= github
     .description= description
     %ul.metadata
       %li.metadatum

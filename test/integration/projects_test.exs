@@ -13,12 +13,12 @@ defmodule Integration.ProjectsTest do
   test "A project renders its website", meta do
     navigate_to("http://localhost:4000/projects/Amrita")
 
-    assert "http://amrita.io" == visible_text({:class, "project_website"})
+    assert "http://amrita.io" == visible_text({:class, "website"})
   end
 
   test "A project renders its github", meta do
     navigate_to("http://localhost:4000/projects/Amrita")
 
-    assert "http://github.com/josephwilk/amrita" == visible_text({:class, "project_github"})
+    assert "josephwilk/amrita" == visible_text({:class, "github"})
   end
 end
