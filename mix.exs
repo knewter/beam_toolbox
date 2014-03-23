@@ -18,7 +18,11 @@ defmodule BeamToolbox.Mixfile do
         :elixir,
         :cadfaerl,
         :phoenix,
-        :calliope
+        :calliope,
+        :httpoison,
+        :xmerl,
+        :jsex,
+        :markdown
       ],
       mod: { BeamToolbox, [] }
     ]
