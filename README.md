@@ -85,10 +85,16 @@ present, but when there are you can run the tests with:
 mix test
 ```
 
-To run the site, start an iex session with `iex -S mix`, and then run
-`BeamToolbox.Router.start`.
+To run the site, start an iex session with `iex -S mix`.  The router will be
+supervised and running on port 4000 already.
 
 Then you can visit http://localhost:4000/pages/foo.
+
+## Release
+
+To build a release, just run `mix release`.  Once that's done, you can run
+`./rel/beam_toolbox/bin/beam_toolbox console` and the production app will be up
+and running, and portable :)
 
 ## Footnotes, etc.
 
