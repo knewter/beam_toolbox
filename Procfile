@@ -1,1 +1,1 @@
-web: iex -S mix
+web: MIX_ENV=prod mix phoenix.start

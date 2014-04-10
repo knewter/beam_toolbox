@@ -8,7 +8,7 @@ defmodule BeamToolbox.Supervisor do
   def init([]) do
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html
     # for other strategies and supported options
-    children = [worker(BeamToolbox.Router, [], [])]
+    children = []
     supervise(children, strategy: :one_for_one)
   end
 end
