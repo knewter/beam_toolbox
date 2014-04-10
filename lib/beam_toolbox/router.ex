@@ -1,7 +1,8 @@
 defmodule BeamToolbox.Router do
+  @port System.get_env("PORT") || 4000
+
   alias BeamToolbox.Controllers
-  use Phoenix.Router,
-        port: 4000
+  use Phoenix.Router, port: @port
 
   plug Plug.Static, at: "/static", from: :beam_toolbox
 
