@@ -6,6 +6,6 @@ defmodule BeamToolbox do
   def start(_type, _args) do
     {:ok, _} = :cadfaerl.start_link(:github, 2000)
     BeamToolbox.GitHub.start
-    BeamToolbox.Supervisor.start_link(System.get_env("PORT"))
+    BeamToolbox.Supervisor.start_link()
   end
 end
