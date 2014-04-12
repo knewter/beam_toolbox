@@ -12,10 +12,10 @@ defmodule BeamToolbox.Controllers.Projects do
       website: project.website,
       github: project.github,
       github_url: "http://github.com/" <> project.github,
-      latest_commit_date: Project.Statistics.latest_commit_date(project.github),
-      stargazers_count: (inspect Project.Statistics.stargazers_count(project.github)),
-      forks_count: (inspect Project.Statistics.forks_count(project.github)),
-      description: Project.Statistics.description(project.github),
+      latest_commit_date: Project.Statistics.Cached.latest_commit_date(project.github),
+      stargazers_count: (inspect Project.Statistics.Cached.stargazers_count(project.github)),
+      forks_count: (inspect Project.Statistics.Cached.forks_count(project.github)),
+      description: Project.Statistics.Cached.description(project.github),
       readme: project |> Project.readme_caching,
       sidebar: render_related_projects(project)
     ]
