@@ -7,5 +7,6 @@ defmodule BeamToolbox do
     {:ok, _} = :cadfaerl.start_link(:github, 2000)
     BeamToolbox.GitHub.start
     BeamToolbox.Supervisor.start_link()
+    BeamToolbox.Router.start
   end
 end
