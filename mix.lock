@@ -23,6 +23,6 @@
   "markdown": {:git, "git://github.com/knewter/markdown.git", "6f87a10d8d0a41fd5cd48eeea61b22b346d3278c", [branch: "feature/0.13-support"]},
   "mime": {:git, "git://github.com/dynamo/mime.git", "db84370c53a67a7e58a4d0cfb026f4edc64a9367", []},
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]},
-  "phoenix": {:git, "git://github.com/knewter/phoenix.git", "949e669d262f592645f52b9e301bf6df212024ce", [branch: "render_haml_with_calliope"]},
+  "phoenix": {:git, "git://github.com/knewter/phoenix.git", "772ca06d942bff96baee55c6e64bcbe3b0b7d648", [branch: "render_haml_with_calliope"]},
   "plug": {:git, "git://github.com/elixir-lang/plug.git", "fce879565115427239e650ae690455565b2fafee", []},
   "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]}}
