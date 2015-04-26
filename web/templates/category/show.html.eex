@@ -1,0 +1,17 @@
+<h2>Show category</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </li>
+
+  <li>
+    <strong>Slug:</strong>
+    <%= @category.slug %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: category_path(@conn, :index) %>
